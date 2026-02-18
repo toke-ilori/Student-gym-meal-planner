@@ -1,2 +1,3 @@
 <?php
-  echo "PHP is working!!";
+require_once 'includes/db.php';
+?>
