@@ -1,31 +1,50 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #9a7997;
+    background-color: #f3e8f5; /* Soft lavender background */
     margin: 40px;
 }
 
 h2 {
-    color: #583858;
+    color: #4b2e4f; /* Deep plum */
 }
 
 form input, form button {
-    padding: 8px;
-    margin: 5px 0;
+    padding: 10px;
+    margin: 8px 0;
     display: block;
+    border-radius: 6px;
+    border: 1px solid #d6c2db;
 }
 
 button {
-    background-color: #581f4a;
+    background-color: #6a1b6d; /* Rich purple */
     color: white;
     border: none;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background-color: #b81a89a6;
+    background-color: #9c4dcc; /* Softer purple hover */
 }
 
 a {
     text-decoration: none;
-    color: #ed97f0;
+    color: #b76bbd; /* Coordinated pastel purple */
+}
+
+a:hover {
+    color: #6a1b6d; /* Matches button color */
+}
+body {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #f3e8f5;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
