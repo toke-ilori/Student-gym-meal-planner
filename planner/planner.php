@@ -86,10 +86,8 @@ while ($row = mysqli_fetch_assoc($res)){
 
     <!-- Date of meal -->
      <input type="date" name="planned_date" required>
-
     <!-- Meal name -->
-     <input type="text" name="text" placeholder="Meal title" required>
-    
+     <input type="text" name="title" placeholder="Meal title" required>
     <!-- Meal type-->
      <select name="meal_type" required>
         <option value="breakfast">breakfast</option>
@@ -97,13 +95,11 @@ while ($row = mysqli_fetch_assoc($res)){
         <option value="dinner">dinner</option>
         <option value="snack">snack</option>
     </select>
-
     <!-- cals and macros-->
      <input type="number" name="calories" placeholder="Calories">
      <input type="number" name="protein_g" placeholder="Protein (g)">
      <input type="number" name="carbs_g" placeholder="Carbs (g)">
      <input type="number" name="fats_g" placeholder="Fats (g)">
-
      <button type="submit">Add</button>
 </form>
 
