@@ -39,7 +39,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html>
-<head><title>Login</title></head>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
+</head>
 <body>
     <h2>Login</h2>
     <!-- shows error message in red -->

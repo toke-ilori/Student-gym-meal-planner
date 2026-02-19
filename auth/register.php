@@ -56,7 +56,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 ?>
 <!DOCTYPE html>
 <html>
-<head><title>Registration</title></head>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
+</head>
 <body>
     <h2>Registration</h2>
     <!-- shows error messgages in red -->
