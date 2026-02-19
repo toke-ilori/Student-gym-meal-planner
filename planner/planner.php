@@ -21,17 +21,21 @@ while ($row = mysqli_fetch_assoc($res)){
     $workouts[] = $row;
 }
 
-// fetch meals 
-$stmt = mysqli_prepare(
-    $con,
-    "SELECT * FROM meals WHERE user_id = ? ORDER BY planned_date DESC"
-);
+// fetch meals / Fetch meals (with error checking)
+$stmt = mysqli_prepare($con, "SELECT * FROM meals WHERE user_id = ? ORDER BY planned_date DESC");
+if (!$stmt) {
+    die("Prepare failed (meals): " . mysqli_error($con));
+}
 mysqli_stmt_bind_param($stmt, "i", $user_id);
-mysqli_stmt_execute($stmt);
+if (!mysqli_stmt_execute($stmt)) {
+    die("Execute failed (meals): " . mysqli_stmt_error($stmt));
+}
 $res = mysqli_stmt_get_result($stmt);
-
-while ($row = mysqli_fetch_assoc($res)){
-    $meal[] = $row;
+if (!$res) {
+    die("Get result failed (meals): " . mysqli_error($con));
+}
+while ($row = mysqli_fetch_assoc($res)) {
+    $meals[] = $row;
 }
 ?>
 <!DOCTYPE html>
