@@ -1,6 +1,18 @@
 <?php
 // homepage after login 
 require_once __DIR__ . '/includes/auth_check.php';
+// Motivational quotes array
+$quotes = [
+    "Consistency beats intensity every time.",
+    "Your only competition is who you were yesterday.",
+    "Discipline is choosing what you want most over what you want now.",
+    "Small progress is still progress.",
+    "Fuel your body. Train your mind.",
+    "Strong habits create strong results.",
+    "You don't have to be extreme. Just consistent."];
+
+// Pick a random quote
+$randomQuote = $quotes[array_rand($quotes)];
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +26,7 @@ require_once __DIR__ . '/includes/auth_check.php';
     <div class="card">
     <h2>
         Welcome,
-        <?php
-        echo htmlspecialchars($_SESSION['name']);?> 👋🏾
+        <?php echo htmlspecialchars($_SESSION['name']);?> 👋🏾
     </h2>
 
     <p>
@@ -23,6 +34,12 @@ require_once __DIR__ . '/includes/auth_check.php';
         Here you can track your workouts, plan your meals,
         and stay consitent with your fitness goals.
     </p>
+
+    <div class="quote-box">
+        <p class="quote">
+         “<?php echo htmlspecialchars($randomQuote); ?>”
+        </p>
+    </div>
 
     <h3> What would you like to do today?</h3>
 
