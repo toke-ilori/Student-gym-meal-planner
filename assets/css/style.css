@@ -45,8 +45,15 @@ body {
 form {
     background: white;
     padding: 20px;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+form input, 
+form select {
+    width: 100%;
+    max-width: 300px;
 }
 .card {
     background: white;
@@ -95,4 +102,26 @@ form {
     font-style: italic;
     color: #4b2e4f;
     font-size: 16px;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
+.alert {
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.alert.success {
+    background-color: #e6f9f0;
+    color: #0f5132;
+}
+
+.alert.error {
+    background-color: #fde8e8;
+    color: #842029;
 }

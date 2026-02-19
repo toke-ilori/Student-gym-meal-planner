@@ -41,6 +41,20 @@ while ($row = mysqli_fetch_assoc($res)){
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
 </head>
 <body>
+    <div class="container">
+
+    <?php if (isset($_GET['success'])): ?>
+        <div class="alert success">
+            <?php echo htmlspecialchars($_GET['success']); ?> ✅
+    </div>
+    <?php endif; ?>
+
+    <?php if (isset($_GET['error'])): ?>
+        <div class="alert error">
+            Please fill in all required fields ❌
+    </div>
+    <?php endif; ?>
+    <div class="card">
 
 <h2>Planner</h2>
 <p>
@@ -57,7 +71,7 @@ while ($row = mysqli_fetch_assoc($res)){
     <!-- Date of workout -->
      <input type="date" name="planned_date" required>
     <!-- Date of title -->
-     <input type="title" name="workout title" required>
+     <input type="text" name= "title" placeholder="workout title" required>
     <!-- Duration (optional) -->
      <input type="number" name="duration_minutes" placeholder="Minutes">
 
@@ -73,7 +87,7 @@ while ($row = mysqli_fetch_assoc($res)){
      <input type="date" name="planned_date" required>
 
     <!-- Meal name -->
-     <input type="title" placeholder="meal title" required>
+     <input type="text" name="text" placeholder="Meal title" required>
     
     <!-- Meal type-->
      <select name="meal_type" required>
@@ -120,7 +134,8 @@ while ($row = mysqli_fetch_assoc($res)){
     </li>
 <?php endforeach; ?>
 </ul>
-
+    </div>
+    </div>
 </body>
 </html>
 
