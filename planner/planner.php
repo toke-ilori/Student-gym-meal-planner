@@ -74,7 +74,8 @@ while ($row = mysqli_fetch_assoc($res)){
      <input type="text" name= "title" placeholder="workout title" required>
     <!-- Duration (optional) -->
      <input type="number" name="duration_minutes" placeholder="Minutes">
-
+    <!-- notes-->
+     <textarea name="notes" placeholder="Workout notes (optional)"></textarea>
     <button type="submit">Add</button>
 </form>
 
