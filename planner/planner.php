@@ -97,8 +97,11 @@ while ($row = mysqli_fetch_assoc($res)){
         <option value="snack">snack</option>
     </select>
 
-    <!-- Calories(optional)-->
+    <!-- cals and macros-->
      <input type="number" name="calories" placeholder="Calories">
+     <input type="number" name="protein_g" placeholder="Protein (g)">
+     <input type="number" name="carbs_g" placeholder="Carbs (g)">
+     <input type="number" name="fats_g" placeholder="Fats (g)">
 
      <button type="submit">Add</button>
 </form>
