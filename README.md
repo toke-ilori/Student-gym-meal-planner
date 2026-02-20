@@ -108,6 +108,13 @@ student-gym-meal-planner/
 
 6. Open the project in your browser:
    - http://localhost:8888/student-gym-meal-planner/
+  
+## What I Learned
+
+- Implementing session-based authentication securely
+- Structuring a PHP project with separation of concerns
+- Designing relational database schemas with foreign keys
+- Preventing SQL injection using prepared statements
 
 ## Notes
 
